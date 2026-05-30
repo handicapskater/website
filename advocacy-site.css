@@ -329,6 +329,11 @@ h3 {
   position: relative;
 }
 
+.timeline-item h2 {
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  margin-bottom: 0.65rem;
+}
+
 .timeline-item::before {
   background: var(--gold);
   border: 3px solid var(--paper);
@@ -339,6 +344,43 @@ h3 {
   position: absolute;
   top: 1.35rem;
   width: 16px;
+}
+
+.timeline-media {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1rem;
+}
+
+.timeline-media figure {
+  margin: 0;
+}
+
+.timeline-media img,
+.single-media img {
+  background: #eef5f4;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.timeline-media figcaption,
+.single-media figcaption {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+}
+
+.callout {
+  background: #fff7e8;
+  border: 1px solid #e4c17a;
+  border-left: 6px solid var(--gold);
+  border-radius: 8px;
+  margin-top: 1rem;
+  padding: 1rem;
 }
 
 details {
@@ -395,7 +437,8 @@ summary {
 
   .hero-grid,
   .three,
-  .two {
+  .two,
+  .timeline-media {
     grid-template-columns: 1fr;
   }
 
