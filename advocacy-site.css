@@ -248,6 +248,10 @@ h3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .two {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -289,6 +293,57 @@ h3 {
   border-radius: 8px;
   box-shadow: var(--shadow);
   width: 100%;
+}
+
+.hero-copy {
+  font-size: 1.08rem;
+  max-width: 760px;
+}
+
+.tableau-context {
+  color: var(--muted);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1180px;
+}
+
+.tableau-frame {
+  aspect-ratio: 16 / 10;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1180px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.tableau-frame iframe {
+  border: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.fallback-link {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1180px;
+}
+
+.check-list {
+  display: grid;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.check-list li {
+  border-left: 5px solid var(--teal);
+  padding-left: 0.85rem;
 }
 
 .media-list,
@@ -406,6 +461,14 @@ summary {
   color: #d6f3f5;
 }
 
+.portfolio-band .card {
+  color: var(--ink);
+}
+
+.portfolio-band .card a {
+  color: var(--teal);
+}
+
 .site-footer {
   background: #0b1d26;
   color: #d7e4e7;
@@ -438,8 +501,13 @@ summary {
   .hero-grid,
   .three,
   .two,
+  .four,
   .timeline-media {
     grid-template-columns: 1fr;
+  }
+
+  .tableau-frame {
+    aspect-ratio: 3 / 4;
   }
 
   .hero-inner,
